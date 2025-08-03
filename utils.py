@@ -7,7 +7,13 @@
 ############################################################
 import logging
 from typing import List
-from sudachipy import tokenizer, dictionary
+import streamlit as st
+try:
+    from sudachipy import tokenizer, dictionary
+except ImportError:
+    st.warning("SudachiPy が Cloud 上で読み込めませんでした。機能の一部を無効化します。")
+    tokenizer = None
+    dictionary = None
 import constants as ct
 
 
