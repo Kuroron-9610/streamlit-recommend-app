@@ -11,7 +11,6 @@ from logging.handlers import TimedRotatingFileHandler
 from uuid import uuid4
 import sys
 import unicodedata
-from dotenv import load_dotenv
 import streamlit as st
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_openai import OpenAIEmbeddings
@@ -25,7 +24,6 @@ import constants as ct
 ############################################################
 # 設定関連
 ############################################################
-load_dotenv()
 
 
 ############################################################
